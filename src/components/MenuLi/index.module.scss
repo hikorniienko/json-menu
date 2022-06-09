@@ -1,0 +1,53 @@
+.li {
+  padding: 0.2rem 0;
+}
+
+.label {
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+  color: black;
+  padding: 0.2rem;
+
+  &Premium {
+    background-color: gold;
+  }
+
+  &Custom {
+    background-color: silver;
+  }
+
+  &Quad {
+    background-color: lightblue;
+  }
+
+  &Masterpw {
+    background-color: lightcoral;
+  }
+  &Basepw {
+    background-color: lightpink;
+  }
+}
+
+.button {
+  display: inline-block;
+  vertical-align: top;
+
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  font-family: inherit;
+  font-size: inherit;
+
+  background: transparent;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  margin-left: 1rem;
+  border: 1px solid #ccc;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+}
