@@ -1,9 +1,12 @@
 import React from 'react';
+import useResize from '../../hooks/useResize';
 import MenuUl from '../MenuUl';
 import styles from './index.module.scss';
 import data from './HS.json';
 
 export default function Menu({ active, state }) {
+  const screenSize = useResize({debounceTime:200})
+
   return (
     <nav className={`${styles.nav} ${active && styles.navActive}`}>
       <button className={styles.navClose} onClick={() => state(false)}>
@@ -20,7 +23,7 @@ export default function Menu({ active, state }) {
         </svg>
       </button>
       <div className={styles.menu}>
-        <MenuUl data={data.children} />
+        <MenuUl data={data.children} renderFull={screenSize.width >= 1200} />
       </div>
     </nav>
   );

@@ -15,7 +15,7 @@ export default function Page() {
 
   return (
     <>
-      <div className={styles.wrap}>
+      <header className={styles.header}>
         <button
           className={styles.burger}
           onClick={() => setMenuActive(!menuActive)}
@@ -30,8 +30,8 @@ export default function Page() {
             <path d="M6 36h36v-4h-36v4zm0-10h36v-4h-36v4zm0-14v4h36v-4h-36z" />
           </svg>
         </button>
-      </div>
-      <Menu active={menuActive} state={setMenuActive} />
+        <Menu active={menuActive} state={setMenuActive} />
+      </header>
     </>
   );
 }

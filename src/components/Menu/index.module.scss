@@ -11,6 +11,12 @@
   background-color: white;
   transition: transform 1s ease;
 
+  @media (min-width: 1200px) {
+    position: relative;
+    background-color: transparent;
+    transform: translateX(0);
+  }
+
   &Active {
     transform: translateX(0);
   }
@@ -45,6 +51,10 @@
       height: 100%;
       pointer-events: none;
     }
+
+    @media (min-width: 1200px) {
+      display: none;
+    }
   }
 }
 
@@ -53,10 +63,34 @@
   overflow-y: auto;
   height: 100%;
 
+  @media (min-width: 1200px) {
+    padding: 0;
+    position: relative;
+    overflow: inherit;
+  }
+
   & > ul {
     padding: 0;
     @media (min-width: 1024px) {
       padding-left: 20%;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 0;
+      position: relative;
+      left: 0;
+      top: auto;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      opacity: 1;
+      pointer-events: auto;
+      box-shadow: none;
+
+      & > li > ul {
+        left: 0;
+        top: auto;
+      }
     }
   }
 
